@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Jost, Pinyon_Script } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -93,7 +95,15 @@ export default function RootLayout({
       lang="en"
       className={`${display.variable} ${body.variable} ${script.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NODE_ENV === "production" && (
+          <>
+            <Analytics />
+            <SpeedInsights />
+          </>
+        )}
+      </body>
     </html>
   );
 }

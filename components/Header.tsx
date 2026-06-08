@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { navLinks, location } from "@/lib/data";
+import { navLinks } from "@/lib/data";
 import { IconMenu, IconClose } from "@/components/Icons";
 
 export default function Header() {
@@ -54,9 +54,6 @@ export default function Header() {
         >
           <span className="block font-serif text-xl font-medium tracking-[0.14em] text-cream md:text-[1.55rem]">
             WEST PRIME
-          </span>
-          <span className="caption mt-1 block text-[0.5rem] text-gold">
-            {location.region}
           </span>
         </a>
 
