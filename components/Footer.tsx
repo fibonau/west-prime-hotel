@@ -116,7 +116,7 @@ export default function Footer() {
             © {year} West Prime Hotel &amp; Restaurant. All rights reserved.
           </p>
           <p className="caption text-[0.55rem] text-stone">
-            Website by <span className="text-gold">Rhenz Aeiou</span>
+            Build by: <span className="text-gold">Next Likha</span>
           </p>
         </div>
       </div>
